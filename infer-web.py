@@ -1,9 +1,6 @@
 #AAAA
 
-# 设置用于记录用户信息的日志记录器
-log_path = os.path.abspath('user_logs/usage_logs.txt')
-user_logger = logging.getLogger('user_logger')
-user_logger.setLevel(logging.INFO)
+# 设置用于记录用户信息的日志记录
 
 # 创建文件处理器
 user_file_handler = logging.FileHandler(log_path)
