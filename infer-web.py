@@ -1,6 +1,9 @@
-#AAAA
-
-# 设置用于记录用户信息的日志记录
+import os
+import logging
+# 设置用于记录用户信息的日志记录器
+log_path = os.path.abspath('user_logs/usage_logs.txt')
+user_logger = logging.getLogger('user_logger')
+user_logger.setLevel(logging.INFO)
 
 # 创建文件处理器
 user_file_handler = logging.FileHandler(log_path)
@@ -27,9 +30,9 @@ load_dotenv()
 from infer.modules.vc.modules import VC
 from infer.modules.uvr5.modules import UVRHANDLER
 from infer.lib.train.process_ckpt import (
-change_info,
-extract_small_model,
-merge,
+    change_info,
+    extract_small_model,
+    merge,
     show_info,
 )
 from i18n.i18n import I18nAuto
