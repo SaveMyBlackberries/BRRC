@@ -1,6 +1,5 @@
 #AAAA
-import os
-import logging
+
 # 设置用于记录用户信息的日志记录器
 log_path = os.path.abspath('user_logs/usage_logs.txt')
 user_logger = logging.getLogger('user_logger')
