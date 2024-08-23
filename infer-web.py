@@ -31,9 +31,9 @@ load_dotenv()
 from infer.modules.vc.modules import VC
 from infer.modules.uvr5.modules import UVRHANDLER
 from infer.lib.train.process_ckpt import (
-    change_info,
-    extract_small_model,
-    merge,
+change_info,
+extract_small_model,
+merge,
     show_info,
 )
 from i18n.i18n import I18nAuto
