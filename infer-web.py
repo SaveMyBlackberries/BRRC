@@ -1441,11 +1441,11 @@ with gr.Blocks(title="未来之声▶︎ •၊၊||၊|။||||။‌‌‌‌�
                             with gr.Accordion('高级设置', visible=True, open=False):
                                 with gr.Column():
                                     f0method0 = gr.Radio(
-                                        label=i18n("Pitch Extraction, rmvpe is best以下设置适合高级玩家，一般情况下不要修改"),
-                                        choices=["harvest", "crepe", "rmvpe"]
+                                        label=i18n("Pitch Extraction以下设置适合高级玩家，一般情况下不要修改"),
+                                        choices=["harvest", "crepe"]
                                         if config.dml is False
                                         else ["harvest", "rmvpe"],
-                                        value="rmvpe",
+                                        value="harvest",
                                         interactive=True,
                                     )
                                     resample_sr0 = gr.Slider(
@@ -1744,4 +1744,4 @@ with gr.Blocks(title="未来之声▶︎ •၊၊||၊|။||||။‌‌‌‌�
             server_port=config.listen_port,
             quiet=True,
         )
-#2024/08/23 12345
+
