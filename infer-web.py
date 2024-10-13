@@ -1316,11 +1316,11 @@ with gr.Blocks(title="未来之声▶︎ •၊၊||၊|။||||။‌‌‌‌�
                             with gr.Accordion('Advanced Settings', open=False, visible=False):
                                 with gr.Column():
                                     f0method0 = gr.Radio(
-                                        label=i18n("Pitch Extraction, rmvpe is best"),
-                                        choices=["harvest", "crepe", "rmvpe"]
+                                        label=i18n("Pitch Extraction"),
+                                        choices=["harvest", "crepe"]
                                         if config.dml is False
                                         else ["harvest", "rmvpe"],
-                                        value="rmvpe",
+                                        value="harvest",
                                         interactive=True,
                                     )
                                     resample_sr0 = gr.Slider(
@@ -1561,11 +1561,11 @@ with gr.Blocks(title="未来之声▶︎ •၊၊||၊|။||||။‌‌‌‌�
                             interactive=True,
                         )
                         f0method1 = gr.Radio(
-                            label=i18n("Pitch Extraction, rmvpe is best"),
-                            choices=["harvest", "crepe", "rmvpe"]
+                            label=i18n("Pitch Extraction"),
+                            choices=["harvest", "crepe"]
                             if config.dml is False
                             else ["harvest", "rmvpe"],
-                            value="rmvpe",
+                            value="harvest",
                             interactive=True,
                         )
                         format1 = gr.Radio(
