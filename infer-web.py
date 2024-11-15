@@ -557,7 +557,7 @@ def tts_and_convert(ttsvoice, text, rate, spk_item, vc_transform, f0_file, f0met
     # Perform TTS (we only need 1 function)
     vo=language_dict[ttsvoice]
     #asyncio.run(edge_tts.Communicate(text, vo, rate=rate_value, volume=volume, pitch=pitch).save("./TEMP/temp_ilariatts.mp3"))
-    aud_path = asyncio.run(run_tts(text, vo, rate_value, volume))
+    aud_path = asyncio.run(run_tts(vo, rate_value, volume))
     #Calls vc similar to any other inference.
     #This is why we needed all the other shit in our call, otherwise we couldn't infer.
     output1, output2, audio_length = vc.vc_single(spk_item , None,aud_path, vc_transform, f0_file, f0method, file_index1, file_index2, index_rate, filter_radius, resample_sr, rms_mix_rate, protect)
